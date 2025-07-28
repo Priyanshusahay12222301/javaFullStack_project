@@ -1,0 +1,55 @@
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper">
+      <div class="sidebar-heading border-bottom bg-light">
+        <a routerLink="/" style="text-decoration: none; color: inherit; cursor: pointer;">
+          Employee Management System
+        </a>
+      </div>
+      <div class="list-group list-group-flush">
+        <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          href="#!"
+          routerLink="/all"
+          routerLinkActive="active"
+          >View Employees</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          href="#!"
+          routerLink="/search"
+          routerLinkActive="active"
+          >Search Employee</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          href="#!"
+          href="#!"
+          routerLink="/insert"
+          routerLinkActive="active"
+          >Add Employee</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          href="#!"
+          href="#!"
+          routerLink="/update"
+          routerLinkActive="active"
+          >Update Employee</a
+        >
+        <a
+          class="list-group-item list-group-item-action list-group-item-light p-3"
+          href="#!"
+          href="#!"
+          routerLink="/delete"
+          routerLinkActive="active"
+          >Delete Employee</a
+        >
+      </div>
+    </div>
+    <div class="container-fluid p-4">
+      <br />
+      <br />
+      <router-outlet></router-outlet>
+    </div>
+  </div>

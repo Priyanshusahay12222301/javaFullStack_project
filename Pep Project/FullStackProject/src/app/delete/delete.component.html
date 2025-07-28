@@ -1,0 +1,13 @@
+<h1>Delete Employee</h1>
+<form #eid="ngForm" (ngSubmit)="deleteEmp(eid)">
+    
+    <div class="col-auto">
+      <input type="text" class="form-control" id="id" name="id"  placeholder="Enter Employee's Id" aria-label="Employee's Id" aria-describedby="button-addon2" ngModel="id" #id="ngModel" ngModel minlength="2" maxlength="6">
+      <span style="color: red" *ngIf="id.touched && id.invalid "> Please enter valid Employee Id</span>
+        <br>
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-danger
+      " id="button-addon2">Delete</button>
+    </div>
+  </form>

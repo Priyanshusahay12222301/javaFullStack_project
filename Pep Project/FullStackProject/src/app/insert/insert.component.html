@@ -1,0 +1,24 @@
+<div>
+    <h2>Welcome to Add Employee</h2>
+    <form #insert="ngForm" (ngSubmit)="insertDetails(insert)">
+        <input type="text" name="id" id="id" class="form-control" maxlength="6" minlength="1" #id="ngModel" ngModel placeholder="id">
+        <span style="color: red" *ngIf="id.touched && id.invalid "> Please enter valid Id</span>
+        <br>
+        <input type="text" name="fname" id="fname" ngm="fname" class="form-control" required maxlength="10" minlength="2" #fname="ngModel" ngModel placeholder="fname">
+        <span style="color: red" *ngIf="fname.touched && fname.invalid "> Please enter valid fname</span>
+        <br>
+        <input type="text" name="lname" id="lname" ngModel class="form-control" required maxlength="10" minlength="2" #lname="ngModel" placeholder="lname">
+        <span style="color: red" *ngIf="lname.touched && lname.invalid "> Please enter valid lname</span>
+        <br>
+        <input type="text" name="age" id="age" ngModel class="form-control" required maxlength="2" minlength="1" #age="ngModel" placeholder="age">
+        <span style="color: red" *ngIf="age.touched && age.invalid "> Please enter valid name</span>
+        <br>
+        <input type="text" name="salary" id="salary" ngModel class="form-control" required maxlength="7" minlength="4" #salary="ngModel" placeholder="salary">
+        <span style="color: red" *ngIf="salary.touched && salary.invalid "> Please enter valid name</span>
+        <br>
+        <input type="submit" value="submit" class="btn btn-success">
+
+        
+
+    </form>
+</div>

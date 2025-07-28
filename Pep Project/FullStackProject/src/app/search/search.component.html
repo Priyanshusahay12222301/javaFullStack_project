@@ -1,0 +1,40 @@
+<!-- <h1>Search Employee</h1> -->
+<form class="row g-3" #eid="ngForm" (ngSubmit)="getEmp(eid)">
+  <h1>Employee Record</h1>
+  <div class="col-auto">
+    <input
+    type="text"
+    class="form-control"
+    id="id"
+    name="id"
+    placeholder="Employee's Id"
+    aria-label="Employee's Id"
+    aria-describedby="button-addon2"
+    [(ngModel)]="id"
+  />
+  
+  </div>
+  <br>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-success" id="button-addon2">Search</button>
+  </div>
+  
+</form>
+  <table class="table striped" *ngIf="emp">
+    <thead>
+        <th scope="col">Eid</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+    </thead>
+    <tbody>
+        <td>{{emp.id}}</td>
+        <td>{{emp.fname}}</td>
+        <td>{{emp.lname}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.salary}}</td>
+    </tbody>
+
+  </table>
